@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop : Home</title>
+  <link rel="stylesheet" crossorigin href="/assets/index-10UCsiLE.css">
+</head>
+
+<!-- font awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- all css file link here  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js"
+  integrity="sha512-6m6AtgVSg7JzStQBuIpqoVuGPVSAK5Sp/ti6ySu6AjRDa1pX8mIl1TwP9QmKXU+4Mhq/73SzOk6mbNvyj9MPzQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+
+
+
+<body class="antialiase">
+  <!-- header section HTML Start from here  -->
+  <section>
+    <header>
+      <div>
+        <nav x-data="{ open: false }" @keydown.window.escape="open = false" class="bg-gray-800">
+          <div class="container px-6 mx-auto lg:px-8">
+            <div class="flex items-center justify-between h-16">
+              <div class="flex items-center justify-between flex-grow">
+                <div class="flex-shrink-0">
+                  <h1
+                    class="text-lg font-semibold tracking-widest text-white hover:transform hover:scale-110 transition-all delay-25 linear">
+                    <a href="#"><span class="text-2xl text-[#01BAB2]">E</span>commerce</a>
+                  </h1>
+                </div>
+                <div class="hidden lg:block">
+                  <div class="flex items-center">
+                    <a href="#"
+                      class="flex flex-row items-center px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md focus:outline-none focus:text-white focus:bg-gray-700">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-home">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                      </svg>
+                      <span class="ml-2">Home</span>
+                    </a>
+                    <a href="#"
+                      class="flex flex-row items-center px-3 py-2 ml-4 text-sm font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
+                      <span class="ml-2">Men</span>
+                    </a>
+                    <a href="#"
+                      class="flex flex-row items-center px-3 py-2 ml-4 text-sm font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
+                      <span class="ml-2">Women</span>
+                    </a>
+                    <a href="#"
+                      class="flex flex-row items-center px-3 py-2 ml-4 text-sm font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
+                      <span class="ml-2">Collection</span>
+                    </a>
+                    <a href="#"
+                      class="flex flex-row items-center px-3 py-2 ml-4 text-sm font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
+                      <span class="ml-2">What's New</span>
+                    </a>
+                    <div class="relative" x-data="{ open: false}">
+                      <button @click="open = !open"
+                        class="flex flex-row items-center px-3 py-2 ml-4 text-sm font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="feather feather-folder">
+                          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        <span class="mx-2">Pages</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" :class="{'rotate-180': open, 'rotate-0': !open}"
+                          class="w-4 h-4 mt-1 transform" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="feather feather-chevron-down">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      </button>
+                      <div @click.away="open = false" x-show="open"
+                        x-transition:enter="transition ease-out duration-100"
+                        x-transition:enter-start="transform opaity-0 scale-95"
+                        x-transition:enter-end="transform opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-75"
+                        x-transition:leave-start="transform opacity-100 scale-100"
+                        x-transition:leave-end="transform opacity-0 scale-95"
+                        class="absolute right-0 w-48 mt-2 origin-top-right rounded-md shadow-lg">
+                        <div class="py-1 bg-white rounded-md shadow-xs">
+                          <a href="#"
+                            class="flex flex-row items-center px-4 py-2 text-sm text-gray-700 focus:text-gray-900 hover:text-gray-900 focus:outline-none hover:bg-gray-100 focus:bg-gray-100">
+                            Blog
+                          </a>
+                          <a href="#"
+                            class="flex flex-row items-center px-4 py-2 text-sm text-gray-700 focus:text-gray-900 hover:text-gray-900 focus:outline-none hover:bg-gray-100 focus:bg-gray-100">
+                            Contact
+                          </a>
+                          <a href="#"
+                            class="flex flex-row items-center px-4 py-2 text-sm text-gray-700 focus:text-gray-900 hover:text-gray-900 focus:outline-none hover:bg-gray-100 focus:bg-gray-100">
+                            Services
+                          </a>
+                          <a href="#"
+                            class="flex flex-row items-center px-4 py-2 text-sm text-gray-700 focus:text-gray-900 hover:text-gray-900 focus:outline-none hover:bg-gray-100 focus:bg-gray-100">
+                            FAQ
+                          </a>
+                          <a href="#"
+                            class="flex flex-row items-center px-4 py-2 text-sm text-gray-700 focus:text-gray-900 hover:text-gray-900 focus:outline-none hover:bg-gray-100 focus:bg-gray-100">
+                            Tram And Condition
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hidden lg:block">
+                <div class="flex items-center ml-4 md:ml-6">
+                  <div @click.away="open = false" class="relative ml-3" x-data="{ open: false }">
+                    <div>
+                      <button @click="open = !open"
+                        class="flex items-center max-w-xs text-sm text-white rounded-full focus:outline-none focus:shadow-solid"
+                        id="user-menu" aria-label="User menu" aria-haspopup="true" x-bind:aria-expanded="open">
+                        <img class="w-8 h-8 rounded-full"
+                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                          alt="" />
+                      </button>
+                    </div>
+                    <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                      x-transition:enter-start="transform opaity-0 scale-95"
+                      x-transition:enter-end="transform opacity-100 scale-100"
+                      x-transition:leave="transition ease-in duration-75"
+                      x-transition:leave-start="transform opacity-100 scale-100"
+                      x-transition:leave-end="transform opacity-0 scale-95"
+                      class="absolute right-0 w-48 mt-2 origin-top-right rounded-md shadow-lg">
+                      <div class="py-1 bg-white rounded-md shadow-xs">
+                        <a href="#"
+                          class="flex flex-row items-center px-4 py-2 text-sm text-gray-700 focus:text-gray-900 hover:text-gray-900 focus:outline-none hover:bg-gray-100 focus:bg-gray-100">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-user">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                          </svg>
+                          <span class="ml-2">Your profile</span>
+                        </a>
+                        <a href="#"
+                          class="flex flex-row items-center px-4 py-2 text-sm text-gray-700 focus:text-gray-900 hover:text-gray-900 focus:outline-none hover:bg-gray-100 focus:bg-gray-100">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-settings">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                            </path>
+                          </svg>
+                          <span class="ml-2">Settings</span>
+                        </a>
+                        <a href="#"
+                          class="flex flex-row items-center px-4 py-2 text-sm text-green-500   focus:outline-none hover:bg-gray-100 ">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-log-out">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                          </svg>
+                          <span class="ml-2">Login</span>
+                        </a>
+                        <a href="#"
+                          class="flex flex-row items-center px-4 py-2 text-sm text-red-500 hover:text-red-700 hover:bg-red-100 focus:outline-none focus:text-red-700 focus:bg-red-100">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-log-out">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                          </svg>
+                          <span class="ml-2">Sign out</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex -mr-2 lg:hidden">
+                <button @click="open = !open"
+                  class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white"
+                  x-bind:aria-label="open ? 'Close main menu' : 'Main menu'" x-bind:aria-expanded="open">
+                  <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    <path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div :class="{'block': open, 'hidden': !open}" class="hidden lg:hidden">
+            <div class="container px-6 mx-auto">
+              <div class="pt-2 pb-3">
+                <a href="#"
+                  class="flex flex-row items-center px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md focus:outline-none focus:text-white focus:bg-gray-700">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-home">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                  <span class="ml-2">Home</span>
+                </a>
+                <a href="#"
+                  class="flex flex-row items-center px-3 py-2 text-base font-medium text-white rounded-md focus:outline-none focus:text-white focus:bg-gray-700">
+                  <span class="ml-2">Men</span>
+                </a>
+
+                <a href="#"
+                  class="flex flex-row items-center px-3 py-2 text-base font-medium text-white  rounded-md focus:outline-none focus:text-white focus:bg-gray-700">
+                  <span class="ml-2">Women</span>
+                </a>
+                <a href="#"
+                  class="flex flex-row items-center px-3 py-2 text-base font-medium text-white rounded-md focus:outline-none focus:text-white focus:bg-gray-700">
+                  <span class="ml-2">Collection</span>
+                </a>
+                <a href="#"
+                  class="flex flex-row items-center px-3 py-2 text-base font-medium text-white  rounded-md focus:outline-none focus:text-white focus:bg-gray-700">
+                  <span class="ml-2"> What's New</span>
+                </a>
+
+                <div class="relative" x-data="{ open: false }">
+                  <button @click="open = true"
+                    class="flex flex-row items-center w-full px-3 py-2 mt-1 text-base font-medium text-left text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="feather feather-folder">
+                      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span class="mx-2">Pages</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" :class="{'rotate-180': open, 'rotate-0': !open}"
+                      class="w-4 h-4 mt-1 transform" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="feather feather-chevron-down">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <div x-show="open" @click.away="open = false" class="px-2 py-2 mt-2 bg-white rounded-md shadow-xs"
+                    role="menu" aria-orientation="vertical" aria-labelledby="user-menu" role="menuitem">
+                    <a href="#"
+                      class="flex flex-row items-center px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
+                      role="menuitem">
+                      Blog
+                    </a>
+                    <a href="#"
+                      class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
+                      role="menuitem">
+                      Contact
+                    </a>
+                    <a href="#"
+                      class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
+                      role="menuitem">
+                      Services
+                    </a>
+                    <a href="#"
+                      class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
+                      role="menuitem">
+                      FAQ
+                    </a>
+                    <a href="#"
+                      class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
+                      role="menuitem">
+                      Trams And Condition
+                    </a>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div class="container px-6 mx-auto">
+              <div x-data="{ open: false }" class="py-4 border-t border-gray-700">
+                <button @click="open = true" class="flex items-center w-full focus:outline-none">
+                  <div class="flex items-center w-full text-left">
+                    <div class="flex-shrink-0">
+                      <img class="w-10 h-10 rounded-full"
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="" />
+                    </div>
+                    <div class="ml-3">
+                      <div class="text-base font-medium leading-none text-white">Tom Cook</div>
+                      <div class="mt-1 text-sm font-medium leading-none text-gray-400">tom@example.com</div>
+                    </div>
+                  </div>
+                  <div class="text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" :class="{'rotate-180': open, 'rotate-0': !open}"
+                      class="w-4 h-4 mt-1 transform" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="feather feather-chevron-down">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+                </button>
+                <div x-show="open" @click.away="open = false" class="py-2 mt-4 bg-white rounded-md shadow-xs"
+                  role="menu" aria-orientation="vertical" aria-labelledby="user-menu" role="menuitem">
+                  <a href="#"
+                    class="flex flex-row items-center px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
+                    role="menuitem">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="feather feather-user">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span class="ml-2">Your profile</span>
+                  </a>
+                  <a href="#"
+                    class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
+                    role="menuitem">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="feather feather-settings">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                      </path>
+                    </svg>
+                    <span class="ml-2">Settings</span>
+                  </a>
+                  <a href="#"
+                    class="flex flex-row items-center px-4 py-2 text-sm text-green-500   focus:outline-none hover:bg-gray-100 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="feather feather-log-out">
+                      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                      <polyline points="16 17 21 12 16 7"></polyline>
+                      <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    <span class="ml-2">Login</span>
+                  </a>
+                  <a href="#"
+                    class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-red-500 rounded-md hover:text-red-700 hover:bg-red-200 focus:outline-none focus:text-red-700 focus:bg-red-200"
+                    role="menuitem">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="feather feather-log-out">
+                      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                      <polyline points="16 17 21 12 16 7"></polyline>
+                      <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    <span class="ml-2">Sign out</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </section>
+
+
+  <!-- hero section HTML start from here  -->
+  <section id="hero_section" class="container mx-auto">
+    <div class="sliderAx h-[85vh]">
+      <div id="slider-1" class="container mx-auto  ">
+        <div class="  bg-center   bg-no-repeat h-[85vh]  py-24 px-5 md:px-10 object-cover"
+          style="background-image: url(/assets/1-TLor0L1X.webp)">
+          <div class="md:w-1/2">
+            <p class="font-thin text-6xl uppercase">A LOOK</p>
+            <p class="text-6xl sm:7xl font-bold">NEW FASHION</p>
+            <p class="text-base mt-5 mb-14 ">Shop the latest clothing, shoes and handbags from top fashion brands, style
+              icons and celebrities.</p>
+            <a href="#"
+              class="bg-gray-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-400 hover:text-gray-800">Contact
+              us</a>
+          </div>
+        </div>
+        <br>
+      </div>
+
+      <div id="slider-2" class="container mx-auto  ">
+        <div class="  bg-center bg-no-repeat h-[85vh] text-[] py-24 px-5 md:px-10 object-cover"
+          style="background-image: url(/assets/2-VzUtsRM7.webp)">
+          <div class="md:w-1/2">
+            <p class="font-thin text-6xl uppercase">A LOOK</p>
+            <p class="text-6xl sm:7xl font-bold">NEW FASHION</p>
+            <p class="text-base mt-5 mb-14 ">Shop the latest clothing, shoes and handbags from top fashion brands, style
+              icons and celebrities.</p>
+            <a href="#"
+              class="bg-gray-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-400 hover:text-gray-800">Contact
+              us</a>
+          </div>
+        </div> <!-- container -->
+        <br>
+      </div>
+    </div>
+    <div class="flex justify-between w-12 mx-auto pb-2">
+      <button id="sButton1" onclick="sliderButton1()" class="bg-gray-800 rounded-full w-4 pb-2 "></button>
+      <button id="sButton2" onclick="sliderButton2() " class="bg-gray-400 rounded-full w-4 p-2"></button>
+    </div>
+  </section>
+
+
+  <!-- show case section HTML start from here  -->
+  <section id="show_case">
+    <div class="container mx-auto my-10 lg:px-20">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-5 sm:mx-5">
+        <div class="w-full sm:w-1/3  ">
+          <!-- show case card wapper  -->
+          <div class="mx-5 sm:mx-0">
+            <!-- even card   -->
+            <div class="h-auto sm:h-[22rem] md:h-[25rem]  w-full  cursor-pointer z-40 relative group overflow-hidden">
+              <img class=" h-full w-full transition-all ease-linear z-10" src="/assets/6-7eHyTRn8.webp"
+                alt="">
+              <div
+                class="h-full w-full bg-[#000000bb] absolute top-0 right-0 opacity-0 group-hover:opacity-100   transition-all  ease-linear">
+              </div>
+              <div
+                class="h-full w-full absolute bottom-0 left-[50rem]  delay-100 group-hover:left-0 sm:group-hover:left-0 flex items-end justify-start  transition-all  ease-linear mb-10">
+                <div class="flex items-baseline flex-col">
+                  <h2 class="text-3xl font-serif leading-relaxed sm:leading-10  text-white text-left ms-5 sm:ms-0">New
+                    <br> <span class="text-4xl sm:text-3xl sm:font-bold uppercase ">Jackets</span> <br> For Men
+                  </h2>
+                  <a href="#"
+                    class="text-base underline text-white text-left ms-8 mt-8 font-mono bg-gray-800 rounded-sm py-2 px-8 shadow-sm shadow-white/20 focus:ring-2 ring-white">
+                    Shop Now
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- odd card  -->
+            <div class="h-auto w-full  cursor-pointer z-40 relative group overflow-hidden mt-5">
+              <img class=" h-full w-full transition-all ease-linear z-10" src="/assets/7-ZhtV8_c0.webp"
+                alt="">
+              <div
+                class="h-full w-full bg-[#000000bb] absolute top-0 right-0 opacity-0 group-hover:opacity-100   transition-all  ease-linear">
+              </div>
+              <div
+                class="h-full w-full absolute bottom-0 left-[30rem]  delay-100 group-hover:left-0 flex items-end justify-start  transition-all  ease-linear ">
+                <div class="flex items-baseline flex-col">
+                  <h2
+                    class="text-2xl sm:text-xl lg:text-4xl font-serif leading-relaxed sm:leading-5  text-white text-left ms-8">
+                    New <br> <span class="text-3xl sm:text-xl lg:text-3xl  uppercase font-bold">Shoes</span> <br> For
+                    Men</h2>
+                  <a href="#"
+                    class="text-base underline text-white text-left ms-8 mt-3 mb-5 sm:mt-2 sm:mb-2 lg:mb-5 lg:px-8 lg:py-2 font-mono bg-gray-800 rounded-sm py-2 px-8 sm:px-2 sm:py-1 shadow-sm shadow-white/20 focus:ring-2 ring-white">
+                    Shop Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full sm:w-1/3  ">
+          <!-- show case card wapper  -->
+          <div class="mx-5 sm:mx-0">
+
+            <!-- odd card  -->
+            <div class="h-auto w-full  cursor-pointer z-40 relative group overflow-hidden ">
+              <img class=" h-full w-full transition-all ease-linear z-10" src="/assets/8-3JecbQgq.webp"
+                alt="">
+              <div
+                class="h-full w-full bg-[#000000bb] absolute top-0 right-0 opacity-0 group-hover:opacity-100   transition-all  ease-linear">
+              </div>
+              <div
+                class="h-full w-full absolute bottom-0 left-[30rem]  delay-100 group-hover:left-0 flex items-end justify-start  transition-all  ease-linear ">
+                <div class="flex items-baseline flex-col">
+                  <h2
+                    class="text-2xl sm:text-xl lg:text-4xl font-serif leading-relaxed sm:leading-5  text-white text-left ms-8">
+                    New <br> <span class="text-3xl sm:text-xl lg:text-3xl  uppercase font-bold">Treads</span> <br> For
+                    Women</h2>
+                  <a href="#"
+                    class="text-base underline text-white text-left ms-8 mt-3 mb-5 sm:mt-2 sm:mb-2 lg:mb-5 lg:px-8 lg:py-2 font-mono bg-gray-800 rounded-sm py-2 px-8 sm:px-2 sm:py-1 shadow-sm shadow-white/20 focus:ring-2 ring-white">
+                    Shop Now
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- even card   -->
+            <div
+              class="h-auto sm:h-[22rem] md:h-[25rem]  w-full  cursor-pointer z-40 relative group overflow-hidden mt-5">
+              <img class=" h-full w-full transition-all ease-linear z-10" src="/assets/9-P8fEkyWN.webp"
+                alt="">
+              <div
+                class="h-full w-full bg-[#000000bb] absolute top-0 right-0 opacity-0 group-hover:opacity-100   transition-all  ease-linear">
+              </div>
+              <div
+                class="h-full w-full absolute bottom-0 left-[50rem]  delay-100 group-hover:left-0 sm:group-hover:left-0 flex items-end justify-start  transition-all  ease-linear mb-10">
+                <div class="flex items-baseline flex-col">
+                  <h2 class="text-3xl font-serif leading-relaxed sm:leading-10  text-white text-left ms-8">New <br>
+                    <span class="text-4xl sm:font-bold sm:text-3xl uppercase ">Trends</span> <br> For Men
+                  </h2>
+                  <a href="#"
+                    class="text-base underline text-white text-left ms-8 mt-8 font-mono bg-gray-800 rounded-sm py-2 px-8 shadow-sm shadow-white/20 focus:ring-2 ring-white">
+                    Shop Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full sm:w-1/3  ">
+          <!-- show case card wapper  -->
+          <div class="mx-5 sm:mx-0">
+            <!-- even card   -->
+            <div class="h-auto sm:h-[22rem] md:h-[25rem]  w-full  cursor-pointer z-40 relative group overflow-hidden">
+              <img class=" h-full w-full transition-all ease-linear z-10" src="/assets/10-VxZRg_12.webp"
+                alt="">
+              <div
+                class="h-full w-full bg-[#000000bb] absolute top-0 right-0 opacity-0 group-hover:opacity-100   transition-all  ease-linear">
+              </div>
+              <div
+                class="h-full w-full absolute bottom-0 left-[50rem]  delay-100 group-hover:left-0 sm:group-hover:left-0 flex items-end justify-start  transition-all  ease-linear mb-10">
+                <div class="flex items-baseline flex-col">
+                  <h2 class="text-3xl font-serif leading-relaxed sm:leading-10  text-white text-left ms-8">New <br>
+                    <span class="text-4xl sm:font-bold sm:text-3xl uppercase">Tops</span> <br> For Men
+                  </h2>
+                  <a href="#"
+                    class="text-base underline text-white text-left ms-8 mt-8 font-mono bg-gray-800 rounded-sm py-2 px-8 shadow-sm shadow-white/20 focus:ring-2 ring-white">
+                    Shop Now
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- odd card  -->
+            <div class="h-auto w-full  cursor-pointer z-40 relative group overflow-hidden mt-5">
+              <img class=" h-full w-full transition-all ease-linear z-10" src="/assets/11-TQPq8XPK.webp"
+                alt="">
+              <div
+                class="h-full w-full bg-[#000000bb] absolute top-0 right-0 opacity-0 group-hover:opacity-100   transition-all  ease-linear">
+              </div>
+              <div
+                class="h-full w-full absolute bottom-0 left-[30rem]  delay-100 group-hover:left-0 flex items-end justify-start  transition-all  ease-linear ">
+                <div class="flex items-baseline flex-col">
+                  <h2
+                    class="text-2xl sm:text-xl lg:text-4xl font-serif leading-relaxed sm:leading-5  text-white text-left ms-8">
+                    New <br> <span class="text-3xl sm:text-xl lg:text-3xl  uppercase font-bold">Jeans</span> <br> For
+                    Women</h2>
+                  <a href="#"
+                    class="text-base underline text-white text-left ms-8 mt-3 mb-5 sm:mt-2 sm:mb-2 lg:mb-5 lg:px-8 lg:py-2 font-mono bg-gray-800 rounded-sm py-2 px-8 sm:px-2 sm:py-1 shadow-sm shadow-white/20 focus:ring-2 ring-white">
+                    Shop Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- New arrivals section HTML start  -->
+  <section id="new_arrivals" class="pb-24 bg-gray-100">
+    <div class="container mx-auto py-10">
+      <div class="text-center">
+        <h2 class=" text-3xl font-bold uppercase font-mono tracking-tight border-b-4 border-gray-900  inline-block ">new
+          arrivals</h2>
+      </div>
+      <div class="">
+
+
+        <div class="mb-4">
+          <ul class="flex flex-wrap justify-center -mb-px text-sm font-medium text-center" id="default-tab"
+            data-tabs-toggle="#default-tab-content" role="tablist">
+            <li class="me-2" role="presentation">
+              <button class="inline-block p-4 border-b-2 rounded-t-lg border-gray-900 text-gray-900 hover:text-gray-900"
+                id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
+                aria-selected="false">New Arrivals</button>
+            </li>
+            <li class="me-2" role="presentation">
+              <button class="inline-block p-4 border-b-2 rounded-t-lg border-gray-900 text-gray-900 hover:text-gray-900"
+                id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard"
+                aria-selected="false">Best Seller</button>
+            </li>
+            <li class="me-2" role="presentation">
+              <button class="inline-block p-4 border-b-2 rounded-t-lg border-gray-900 text-gray-900 hover:text-gray-900"
+                id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings"
+                aria-selected="false">Most View</button>
+            </li>
+            <li role="presentation">
+              <button class="inline-block p-4 border-b-2 rounded-t-lg border-gray-900 text-gray-900 hover:text-gray-900"
+                id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts"
+                aria-selected="false">Sale</button>
+            </li>
+            <li role="presentation">
+              <button
+                class="inline-block ms-3 p-4 border-b-2 rounded-t-lg border-gray-900 text-gray-900 hover:text-gray-900"
+                id="whats_new-tab" data-tabs-target="#whats_new" type="button" role="tab" aria-controls="whats_new"
+                aria-selected="false"> What's New</button>
+            </li>
+          </ul>
+
+
+
+        </div>
+        <div id="default-tab-content">
+          <div class="hidden  rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="flex items-center justify-center gap-5 flex-wrap px-5  ">
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64  h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/1.5-DFr64lTx.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/4.5-tVVHfxAu.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/2-HcnAIXM3.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/2.5-qCJ6YaAA.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/3-J51WUWs6.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/3.5-hJukWEWh.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/4-pugiaR7K.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/4.5-tVVHfxAu.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/3.5-hJukWEWh.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/4-pugiaR7K.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/7.-aN4Be4Ci.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/7-sH-jBCgZ.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/8.5-ZqLynVVd.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/8-jArdsa0r.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/9-9fkWAHcL.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/9.5-jutxiHk0.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="hidden px-4 rounded-lg " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+            <div class="flex items-center justify-center gap-5 flex-wrap">
+
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/3.5-hJukWEWh.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/4-pugiaR7K.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/7.-aN4Be4Ci.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/7-sH-jBCgZ.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/8.5-ZqLynVVd.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/8-jArdsa0r.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/9-9fkWAHcL.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/9.5-jutxiHk0.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/1.5-DFr64lTx.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/4.5-tVVHfxAu.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/2-HcnAIXM3.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/2.5-qCJ6YaAA.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/3-J51WUWs6.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/3.5-hJukWEWh.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/4-pugiaR7K.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/4.5-tVVHfxAu.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="hidden px-4 rounded-lg  " id="settings" role="tabpanel" aria-labelledby="settings-tab">
+            <div class="flex items-center justify-center gap-5 flex-wrap">
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/1.5-DFr64lTx.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/4.5-tVVHfxAu.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/2-HcnAIXM3.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/2.5-qCJ6YaAA.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/3-J51WUWs6.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/3.5-hJukWEWh.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/4-pugiaR7K.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/4.5-tVVHfxAu.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/3.5-hJukWEWh.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/4-pugiaR7K.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/7.-aN4Be4Ci.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/7-sH-jBCgZ.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/8.5-ZqLynVVd.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/8-jArdsa0r.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/9-9fkWAHcL.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/9.5-jutxiHk0.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="hidden px-4 rounded-lg  " id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+            <div class="flex items-center justify-center gap-5 flex-wrap">
+
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/3.5-hJukWEWh.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/4-pugiaR7K.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/7.-aN4Be4Ci.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/7-sH-jBCgZ.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/8.5-ZqLynVVd.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/8-jArdsa0r.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/9-9fkWAHcL.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/9.5-jutxiHk0.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/1.5-DFr64lTx.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/4.5-tVVHfxAu.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/2-HcnAIXM3.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/2.5-qCJ6YaAA.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/3-J51WUWs6.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/3.5-hJukWEWh.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/4-pugiaR7K.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/4.5-tVVHfxAu.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="hidden px-4 rounded-lg  " id="whats_new" role="tabpanel" aria-labelledby="whats_new-tab">
+            <div class="flex items-center justify-center gap-5 flex-wrap">
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/1.5-DFr64lTx.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/4.5-tVVHfxAu.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/2-HcnAIXM3.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/2.5-qCJ6YaAA.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/3-J51WUWs6.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/3.5-hJukWEWh.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/4-pugiaR7K.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/4.5-tVVHfxAu.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/3.5-hJukWEWh.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/4-pugiaR7K.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/7.-aN4Be4Ci.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/7-sH-jBCgZ.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/8.5-ZqLynVVd.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/8-jArdsa0r.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- product card  -->
+              <a class="" href="#">
+                <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+                  <img src="/assets/9-9fkWAHcL.png" class="hover:scr" alt="Product Image"
+                    class="w-full h-full object-cover">
+                  <div
+                    class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <img src="/assets/9.5-jutxiHk0.png" alt="Product Image on Hover"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div class="shadow-lg bg-gray-900 py-2">
+                    <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                    <div class="flex items-center justify-evenly">
+                      <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                      <input
+                        class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                        type="button" value="Buy Now">
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- New Deal section HTML start from here  -->
+  <section id="new_deal" class="bg-gray-900">
+    <div class="container mx-auto  bg-left bg-no-repeat bg-cover "
+      style="background-image: url(/assets/deal_model-ts9ygNpO.png);">
+      <div class=" ">
+        <div class="bg-[#0d203ab8] py-5 lg:py-32 xl:py-42">
+          <h3 class="text-center text-lg text-white font-bold lg:text-2xl">Deal of the day</h3>
+          <h2 class="text-white text-center text-xl mt-4 lg:text-2xl">
+            New Collection In This <strong> Winter Season</strong> Sales
+          </h2>
+          <div id="countdown">
+            <ul class="text-center pt-5">
+              <li class="inline-block lg:text-2xl lg:w-36 lg:bg-gray-900 lg:rounded-md   text-white p-5 text-center">
+                <span class="block text-2xl" id="days"></span>days
+              </li>
+              <li class="inline-block lg:text-2xl lg:w-36 lg:bg-gray-900 lg:rounded-md   text-white p-5 text-center">
+                <span class="block text-2xl" id="hours"></span>Hours
+              </li>
+              <li class="inline-block lg:text-2xl lg:w-36 lg:bg-gray-900 lg:rounded-md   text-white p-5 text-center">
+                <span class="block text-2xl" id="minutes"></span>Minutes
+              </li>
+              <li class="inline-block lg:text-2xl lg:w-36 lg:bg-gray-900 lg:rounded-md   text-white p-5 text-center">
+                <span class="block text-2xl" id="seconds"></span>Seconds
+              </li>
+            </ul>
+          </div>
+          <button
+            class="flex items-center justify-center mt-3 lg:mt-10 bg-white text-gray-900  w-32 py-1.5 rounded-md ring-gray-900   px-2 m-auto">
+            <span class="me-1">Get 15% off</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+            </svg>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- subscribe section HTML start from here  -->
+  <section id="subscribe" class="bg-gray-300">
+    <div class="container mx-auto py-10 text-center">
+      <div class="">
+        <h2 class="uppercase text-lg sm:text-2xl text-gray-950"><strong>SIGN UP</strong> FOR NEWSLETTER</h2>
+        <p class="text-base sm:text-xl italic mt-0 sm:mt-2 hover:underline">Get exclusive deals you wont find anywhere
+          else straight to your inbox!</p>
+      </div>
+      <div class="mt-5 sm:mt-10 bg-gray-500 inline-block px-10 py-3 rounded-lg">
+        <input placeholder="Your Email " class="border-0 w-32 sm:w-64 text-sm  focus:ring-gray-950 focus:ring-2"
+          type="email" name="email" id="email">
+        <input type="submit"
+          class="bg-gray-800  ms-[-4px] text-white font-bold font-serif py-[7px] px-3  cursor-pointer"
+          value="Subscribe">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- best sail products  -->
+  <section id="best_sail_product" class="bg-gray-300 py-10 ">
+    <div class="container mx-auto">
+      <div class="text-center">
+        <h2 class="text-2xl uppercase font-bold"><strong class="text-gray-900">BEST SELLER</strong> PRODUCTS</h2>
+      </div>
+      <div class="">
+        <div class="flex items-center justify-center gap-5 flex-wrap">
+          <!-- product card  -->
+          <a class="" href="#">
+            <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+              <img src="/assets/8.5-ZqLynVVd.png" class="hover:scr" alt="Product Image"
+                class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                <img src="/assets/8-jArdsa0r.png" alt="Product Image on Hover"
+                  class="w-full h-full object-cover">
+              </div>
+              <div class="shadow-lg bg-gray-900 py-2">
+                <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                <div class="flex items-center justify-evenly">
+                  <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                  <input
+                    class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                    type="button" value="Buy Now">
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- product card  -->
+          <a class="" href="#">
+            <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+              <img src="/assets/9-9fkWAHcL.png" class="hover:scr" alt="Product Image"
+                class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                <img src="/assets/9.5-jutxiHk0.png" alt="Product Image on Hover"
+                  class="w-full h-full object-cover">
+              </div>
+              <div class="shadow-lg bg-gray-900 py-2">
+                <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                <div class="flex items-center justify-evenly">
+                  <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                  <input
+                    class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                    type="button" value="Buy Now">
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- product card  -->
+          <a class="" href="#">
+            <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+              <img src="/assets/1.5-DFr64lTx.png" class="hover:scr" alt="Product Image"
+                class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                <img src="/assets/4.5-tVVHfxAu.png" alt="Product Image on Hover"
+                  class="w-full h-full object-cover">
+              </div>
+              <div class="shadow-lg bg-gray-900 py-2">
+                <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                <div class="flex items-center justify-evenly">
+                  <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                  <input
+                    class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                    type="button" value="Buy Now">
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- product card  -->
+          <a class="" href="#">
+            <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+              <img src="/assets/2-HcnAIXM3.png" class="hover:scr" alt="Product Image"
+                class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                <img src="/assets/2.5-qCJ6YaAA.png" alt="Product Image on Hover"
+                  class="w-full h-full object-cover">
+              </div>
+              <div class="shadow-lg bg-gray-900 py-2">
+                <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                <div class="flex items-center justify-evenly">
+                  <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                  <input
+                    class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                    type="button" value="Buy Now">
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- product card  -->
+          <a class="" href="#">
+            <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+              <img src="/assets/3-J51WUWs6.png" class="hover:scr" alt="Product Image"
+                class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                <img src="/assets/3.5-hJukWEWh.png" alt="Product Image on Hover"
+                  class="w-full h-full object-cover">
+              </div>
+              <div class="shadow-lg bg-gray-900 py-2">
+                <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                <div class="flex items-center justify-evenly">
+                  <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                  <input
+                    class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                    type="button" value="Buy Now">
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- product card  -->
+          <a class="" href="#">
+            <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+              <img src="/assets/4-pugiaR7K.png" class="hover:scr" alt="Product Image"
+                class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                <img src="/assets/4.5-tVVHfxAu.png" alt="Product Image on Hover"
+                  class="w-full h-full object-cover">
+              </div>
+              <div class="shadow-lg bg-gray-900 py-2">
+                <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                <div class="flex items-center justify-evenly">
+                  <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                  <input
+                    class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                    type="button" value="Buy Now">
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- product card  -->
+          <a class="" href="#">
+            <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+              <img src="/assets/3.5-hJukWEWh.png" class="hover:scr" alt="Product Image"
+                class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                <img src="/assets/4-pugiaR7K.png" alt="Product Image on Hover"
+                  class="w-full h-full object-cover">
+              </div>
+              <div class="shadow-lg bg-gray-900 py-2">
+                <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                <div class="flex items-center justify-evenly">
+                  <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                  <input
+                    class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                    type="button" value="Buy Now">
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- product card  -->
+          <a class="" href="#">
+            <div class="relative w-64 h-64 bg-white  cursor-pointer shadow-lg mb-5 mt-10">
+              <img src="/assets/7.-aN4Be4Ci.png" class="hover:scr" alt="Product Image"
+                class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-white   flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                <img src="/assets/7-sH-jBCgZ.png" alt="Product Image on Hover"
+                  class="w-full h-full object-cover">
+              </div>
+              <div class="shadow-lg bg-gray-900 py-2">
+                <h2 class="text-white text-center text-sm mb-1">URBAN Men Winter Stylish Jacke...</h2>
+                <div class="flex items-center justify-evenly">
+                  <p class="text-white">18.0$ <span class="line-through text-sm ms-1">20.0$</span></p>
+                  <input
+                    class=" text-white border border-white px-2 hover:bg-white hover:text-gray-900 font-bold rounded-md"
+                    type="button" value="Buy Now">
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- blog section HTML start from here  -->
+  <section id="latest_blog" class="my-16">
+    <div class="container mx-auto">
+      <div class="text-center">
+        <h2 class="text-2xl uppercase font-bold">LATEST <strong class="text-gray-900">BLOG</strong></h2>
+      </div>
+      <div class="mt-12">
+        <!-- Implement the carousel -->
+        <div class="relative w-full mx-auto">
+          <div class="slide">
+            <div class="w-full h-[70vh]">
+              <div class="flex items-center justify-evenly">
+
+               <div class="shadow-xl hover:shadow-2xl">
+                  <div class="overflow-hidden">
+                    <img class="hover:transform hover:scale-150 opacity-85 hover:opacity-100 transition-all" src="/assets/1-1zsXma8D.webp" alt="images">
+                  </div>
+                  <div class="px-2 mt-3">
+                    <h3 class="text-lg text-gray-900">From Now we are certified web...</h3>
+                    <div class="flex items-center justify-between my-2">
+                      <span>2014-04-20 21:50:35</span>
+                      <a href="#" class="flex items-center justify-center">
+                        Read More 
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                          stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hidden md:block shadow-xl hover:shadow-2xl">
+                  <div class="overflow-hidden">
+                    <img class="hover:transform hover:scale-150 opacity-85 hover:opacity-100 transition-all" src="/assets/2-C0L75WH2.webp" alt="images">
+                  </div>
+                  <div class="px-2 mt-3">
+                    <h3 class="text-lg text-gray-900">From Now we are certified web...</h3>
+                    <div class="flex items-center justify-between my-2">
+                      <span>2014-04-20 21:50:35</span>
+                      <a href="#" class="flex items-center justify-center">
+                        Read More 
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                          stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="w-full h-[70vh]">
+              <div class="flex items-center justify-evenly">
+                <div class="shadow-xl hover:shadow-2xl">
+                  <div class="overflow-hidden">
+                    <img class="hover:transform hover:scale-150 opacity-85 hover:opacity-100 transition-all" src="/assets/2-C0L75WH2.webp" alt="images">
+                  </div>
+                  <div class="px-2 mt-3">
+                    <h3 class="text-lg text-gray-900">From Now we are certified web...</h3>
+                    <div class="flex items-center justify-between my-2">
+                      <span>2014-04-20 21:50:35</span>
+                      <a href="#" class="flex items-center justify-center">
+                        Read More 
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                          stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+               
+                <div class="hidden md:block shadow-xl hover:shadow-2xl">
+                  <div class="overflow-hidden">
+                    <img class="hover:transform hover:scale-150 opacity-85 hover:opacity-100 transition-all" src="/assets/1-1zsXma8D.webp" alt="images">
+                  </div>
+                  <div class="px-2 mt-3">
+                    <h3 class="text-lg text-gray-900">From Now we are certified web...</h3>
+                    <div class="flex items-center justify-between my-2">
+                      <span>2014-04-20 21:50:35</span>
+                      <a href="#" class="flex items-center justify-center">
+                        Read More 
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                          stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="w-full h-[70vh]">
+              <div class="flex items-center justify-evenly">
+
+               <div class="shadow-xl hover:shadow-2xl">
+                  <div class="overflow-hidden">
+                    <img class="hover:transform hover:scale-150 opacity-85 hover:opacity-100 transition-all" src="/assets/1-1zsXma8D.webp" alt="images">
+                  </div>
+                  <div class="px-2 mt-3">
+                    <h3 class="text-lg text-gray-900">From Now we are certified web...</h3>
+                    <div class="flex items-center justify-between my-2">
+                      <span>2014-04-20 21:50:35</span>
+                      <a href="#" class="flex items-center justify-center">
+                        Read More 
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                          stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hidden md:block shadow-xl hover:shadow-2xl">
+                  <div class="overflow-hidden">
+                    <img class="hover:transform hover:scale-150 opacity-85 hover:opacity-100 transition-all" src="/assets/2-C0L75WH2.webp" alt="images">
+                  </div>
+                  <div class="px-2 mt-3">
+                    <h3 class="text-lg text-gray-900">From Now we are certified web...</h3>
+                    <div class="flex items-center justify-between my-2">
+                      <span>2014-04-20 21:50:35</span>
+                      <a href="#" class="flex items-center justify-center">
+                        Read More 
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                          stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+          <!-- The previous button -->
+          <a class="absolute left-0 top-[25%] sm:top-[40%] xl:top-[30%] p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+            onclick="moveSlide(-1)">❮</a>
+
+          <!-- The next button -->
+          <a class="absolute right-0 top-[25%] sm:top-[40%] xl:top-[30%] p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+            onclick="moveSlide(1)">❯</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- brand section HTMl start from here  -->
+  <section id="brand" class="mb-16">
+    <div class="container mx-auto">
+      <hr>
+      <div class="flex items-center justify-evenly flex-wrap my-5">
+        <div class="cursor-pointer mt-5">
+          <img class="opacity-65 hover:opacity-100 hover:transform hover:scale-125 transition-all" src="data:image/webp;base64,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" alt="image">
+        </div>
+        <div class="cursor-pointer mt-5">
+          <img class="opacity-65 hover:opacity-100 hover:transform hover:scale-125 transition-all" src="data:image/webp;base64,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" alt="image">
+        </div>
+        <div class="cursor-pointer mt-5">
+          <img class="opacity-65 hover:opacity-100 hover:transform hover:scale-125 transition-all" src="data:image/webp;base64,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" alt="image">
+        </div>
+        <div class="cursor-pointer mt-5">
+          <img class="opacity-65 hover:opacity-100 hover:transform hover:scale-125 transition-all" src="data:image/webp;base64,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" alt="image">
+        </div>
+        <div class="cursor-pointer mt-5">
+          <img class="opacity-65 hover:opacity-100 hover:transform hover:scale-125 transition-all" src="data:image/webp;base64,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" alt="image">
+        </div>
+      </div>
+      <hr>
+    </div>
+  </section>
+
+  <!-- our service section HTML start from here  -->
+  <section id="our_services"  >
+    <div class="container mx-auto mb-16">
+      <div class="flex items-center justify-center flex-wrap">
+        <div class="flex items-center w[70rem]  mt-5 sm:ms-5 justify-center gap-3 shadow-md  hover:shadow-gray-900 py-4 px-5 rounded-md cursor-pointer ">
+          <div class="">
+            <i class="fa-solid fa-truck text-4xl text-gray-700"></i>
+          </div>
+          <div class="">
+            <h2 class="text-1xl text-gray-900 font-bold">
+              FREE SHIPPING
+            </h2>
+            <p class=" text-sm">
+              Free shipping on all UK orders
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center w[70rem] mt-5 sm:ms-5  justify-center gap-3 shadow-md  hover:shadow-gray-900 py-4 px-5 rounded-md cursor-pointer ">
+          <div class="">
+            <i class="fa-solid fa-rotate text-4xl text-gray-700"></i>
+          </div>
+          <div class="">
+            <h2 class="text-1xl text-gray-900 font-bold">
+              FREE EXCHANGE
+            </h2>
+            <p class=" text-sm">
+              30 days return on all items
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center w[70rem] mt-5 sm:ms-5  justify-center gap-3 shadow-md  hover:shadow-gray-900 py-4 px-5 rounded-md cursor-pointer ">
+          <div class="">
+            <i class="fa-solid fa-headset text-4xl text-gray-700"></i>
+          </div>
+          <div class="">
+            <h2 class="text-1xl text-gray-900 font-bold">
+              PREMIUM SUPPORT
+            </h2>
+            <p class=" text-sm">
+              We support online 24 hours a day
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center w[70rem] mt-5 sm:ms-5  justify-center gap-3 shadow-md  hover:shadow-gray-900 py-4 px-5 rounded-md cursor-pointer ">
+          <div class="">
+            <i class="fa-solid fa-gifts text-4xl text-gray-700"></i>
+          </div>
+          <div class="">
+            <h2 class="text-1xl text-gray-900 font-bold">  
+              BLACK FRIDAY
+            </h2>
+            <p class=" text-sm">
+              Shocking discount on every friday
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- footer section HTML start from here  -->
+  <footer class="bg-gray-900 text-white pt-10">
+    <div class="container mx-auto">
+      <div class="flex   items-start  justify-evenly flex-wrap">
+        <div class="mt-5 lg:mt-0 w-72">
+          <h2 class="text-[20px] font-bold mb-4 underline underline-offset-8  ">CONTACT INFO</h2>
+          <div class="flex items-center justify-start gap-4">
+            <div class="">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="mb-3">
+              <span>
+                8901 Marmora Road, Glasgow
+              </span> <br>
+              <span>D04 89 GR, New York</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-start gap-4">
+            <div class="">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="mb-3">
+              <span>
+                Telephones: (+1) 866-540-3229
+              </span> <br>
+              <span>Fax: (+1) 866-540-3229</span>
+            </div>
+          </div>
+          <div class="flex items-start justify-start gap-4">
+            <div class="">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="">
+              <span>
+                Email: support@ecommers.com
+              </span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mt-5 lg:mt-0 w-72">
+          <h2 class="text-[20px] font-bold mb-4 underline underline-offset-8">MY ACCOUNT</h2>
+          <ul>
+            <li class="mb-2"><a href="#">My Orders</a></li>
+            <li class="mb-2"><a href="#">My Credit Slips</a></li>
+            <li class="mb-2"><a href="#">Sitemap</a></li>
+            <li class="mb-2"><a href="#">My Addresses</a></li>
+            <li class="mb-2"><a href="#">My Personal Info</a></li>
+          </ul>
+        </div>
+
+
+        <div class="mt-5 lg:mt-0 w-72">
+          <h2 class="text-[20px] font-bold mb-3 underline underline-offset-8">INFORMATION</h2>
+          <ul>
+            <li class="mb-2"><a href="#">Contact Us</a></li>
+            <li class="mb-2"><a href="#">Discount</a></li>
+            <li class="mb-2"><a href="#">Site Map</a></li>
+            <li class="mb-2"><a href="#">About Us</a></li>
+            <li class="mb-2"><a href="#">Custom Service</a></li>
+          </ul>
+        </div>
+
+
+        <div class="mt-5 lg:mt-0 w-72">
+          <h2 class="text-[20px] font-bold mb-4 underline underline-offset-8">OPENING TIME</h2>
+          <ul>
+            <li class="mb-2 flex items-center justify-between gap-16">
+              <p> Monday - Friday</p>
+              <p>9:00 - 22:00</p>
+            </li>
+            
+            <li class="mb-2 flex items-center justify-between gap-16">
+              <p>Saturday</p>
+              <p>10:00 - 24:00</p>
+            </li>
+
+            <li class="mb-2 flex items-center justify-between gap-16">
+              <p>Sunday</p>
+              <p>10:00 - 24:00</p>
+            </li>
+            
+            <li class="mb-2 flex items-center justify-between gap-16">
+              <p>Thursday</p>
+              <p>Free Shipping</p>
+            </li>
+
+
+            <li class="mb-2 flex items-center justify-between gap-16">
+              <p>Friday</p>
+              <p>Sale Of 30%</p>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr class="mt-5">
+
+
+
+    <div class="container mx-auto flex  items-center justify-center md:justify-between flex-wrap py-5">
+      <div class="">
+        <p>Copyright <strong class="underline"><a href="https://www.facebook.com/prodip.raj.188/">Prodip Raj </a></strong> All Rights Reserved</p> 
+      </div>
+      <div class="mt-3 sm:mt-0">
+        <img src="data:image/webp;base64,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" alt="images">
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- all js file link here  -->
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+  <script src="./assets/main.js"></script>
+</body>
+
+</html>
